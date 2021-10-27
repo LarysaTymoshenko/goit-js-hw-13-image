@@ -51,6 +51,7 @@ li {
     color: lightcyan;
   }
 }
+
 .scroll-to-top {
   display: none;
   margin: 0;
@@ -72,7 +73,7 @@ li {
     height: 100%;
     border-width: 10px 10px 0 0;
     border-style: solid;
-    border-color: rgb(243, 180, 180);
+    border-color: rgb(139, 247, 241);
     transition: 200ms $cubic;
     display: block;
     transform-origin: 100% 0;
@@ -85,9 +86,6 @@ li {
     top: -100%;
     width: 100%;
     height: 100%;
-    border-width: 0 10px 0 0;
-    border-style: solid;
-    border-color: white;
     transform-origin: 100% 0;
     transition: 200ms $cubic;
   }

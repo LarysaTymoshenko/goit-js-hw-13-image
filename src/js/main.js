@@ -47,19 +47,23 @@ function onClearGallery() {
   galleryEL.innerHTML = '';
 }
 
-function onLoadMoreBtnClick() {
-  onFetchImages();
+const scrollBtn = document.querySelector('.scroll-to-top')
 
-  const options = {
-    top: null,
-    behavior: 'smooth',
-  };
+window.addEventListener('scroll', ()=> {
+   if (window.pageYOffset > 500) {
+      scrollBtn.classList.add('active')
+    } else {
+      scrollBtn.classList.remove('active')
+  }
+})
 
-  options.top = window.pageYOffset + document.documentElement.clientHeight;
-  setTimeout(() => {
-    window.scrollTo(options);
-  }, 1000);
-}
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+  })
+})
+
 
 const onEntry = entries => {
   entries.forEach(entry => {
